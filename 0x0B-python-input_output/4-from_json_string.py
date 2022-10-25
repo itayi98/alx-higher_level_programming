@@ -1,12 +1,16 @@
 #!/usr/bin/python3
-''' function that returns an object (Python data structure) represented by a JSON string
-'''
+"""Module 4-append_write.
+Appends a string at the end of a text file.
+"""
 
-import json
 
+def append_write(filename="", text=""):
+    """Appends text to filename.
+    Args:
+        - filename: name of the file
+        - text: text to append
+    Returns: the number of characters added
+    """
 
-def from_json_string(my_str):
-    ''' module from_json_string
-     returns Python objects
-    '''
-    return json.loads(my_str)
+    with open(filename, 'a+') as f:
+        return f.write(text)
