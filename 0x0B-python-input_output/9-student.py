@@ -1,10 +1,20 @@
 #!/usr/bin/python3
-'''function that returns the dictionary description with simple data structure
+''' a class Student that defines a student
 '''
 
 
-def class_to_json(obj):
-    '''module class_to_json
-       returns builds a dictionary
+class Student:
+    '''module class student
     '''
-    return obj.__dict__
+
+    def __init__(self, first_name, last_name, age):
+        '''method __init__
+        '''
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+
+    def to_json(self):
+        '''method to_json
+        '''
+        return self.__dict__
