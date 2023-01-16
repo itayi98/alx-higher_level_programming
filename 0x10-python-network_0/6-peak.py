@@ -25,4 +25,4 @@ def find_peak(numbr):
             return value
         elif idx == length - 1 and numbr[idx - 1] <= value:
             return value
-    return 
+    return pick
